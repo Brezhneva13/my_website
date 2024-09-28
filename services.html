@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Сервисы - Обучение веб-разработке в игровой форме</title>
+    <link rel="stylesheet" href="https://unpkg.com/open-props">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.OpenAIapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.OpenAIapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet"> 
+</head>
+<body>
+    <header class="op-container py-4 bg-gray-100">
+        <nav class="op-menu flex justify-between items-center">
+            <h1 class="text-3xl font-bold text-gray-800">Обучение в игре</h1>
+            <ul class="flex space-x-4 justify-end"> 
+                <li><a href="#" class="hover:underline">Блоги</a></li>
+                <li><a href="#" class="hover:underline">Онлайн-магазины</a></li>
+                <li><a href="#" class="hover:underline">Социальные сети</a></li>
+            </ul>
+            <button id="theme-toggle" class="op-button bg-gray-800 hover:bg-gray-900 text-white font-bold py-2 px-4 rounded">
+                <span id="theme-text">Темная тема</span>
+            </button>
+        </nav>
+    </header>
+
+    <main class="op-container py-8 flex justify-between"> 
+        <aside class="flex-shrink-0 mr-4">  <!-- Левое меню -->
+            <ul class="list-disc pl-8 text-gray-600">
+                <li><a href="index.html" class="hover:underline">Главная</a></li>
+                <li><a href="services.html" class="hover:underline">Сервисы</a></li>
+                <li><a href="advantages.html" class="hover:underline">Преимущества</a></li>
+                <li><a href="reviews.html" class="hover:underline">Отзывы</a></li>
+                <li><a href="contacts.html" class="hover:underline">Контакты</a></li>
+                <li><a href="about.html" class="hover:underline">О нас</a></li>
+            </ul>
+        </aside>
+
+        <section class="op-main px-4 flex-grow"> 
+            <h2 class="text-2xl font-bold mb-4">Наши сервисы</h2>
+            <p class="text-gray-600 mb-4">
+                Выберите сервис, который вам интересен:
+            </p>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+                <!-- Сервис 1: HTML -->
+                <div class="op-card bg-white p-4 rounded-lg shadow-md">
+                    <img src="https://avatars.mds.yandex.net/i?id=0d8fce6ec9613ec71452ae2e6b34dc10a6ab7dd8-9096591-images-thumbs&n=13" alt="HTML" class="w-full rounded-md mb-4">
+                    <h3 class="text-lg font-bold mb-2">HTML</h3>
+                    <p class="text-gray-600">
+                        HTML (от английского HyperText Markup Language) — это язык гипертекстовой разметки текста. 
+                        Он нужен, чтобы размещать на веб-странице элементы: текст, картинки, таблицы и видео. 
+                        Когда вы заходите на сайт, браузер подгружает HTML-файл с информацией о структуре и контенте веб-страницы. 
+                        HTML как бы выстраивает визуальный фундамент сайта, но не «запускает» его самостоятельно. Он всего лишь указывает, где располагаются элементы, 
+                        какой у них будет базовый дизайн, откуда брать стили для элементов и скрипты.
+                        Создайте свой первый сайт с помощью HTML! Играя, вы узнаете основы веб-разработки, 
+                        как создавать страницы, заголовки, параграфы, и многое другое.
+                    </p>
+                    <a href="service-html.html" class="op-button mt-4 bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded">
+                        Подробнее
+                    </a>
+                </div>
+
+                <!-- Сервис 2: CSS -->
+                <div class="op-card bg-white p-4 rounded-lg shadow-md">
+                    <img src="https://avatars.dzeninfra.ru/get-zen_doc/271828/pub_6580a950586fc45b4db5e7b3_6580cc2b35855b22fa3b5957/scale_1200" alt="CSS" class="w-full rounded-md mb-4">
+                    <h3 class="text-lg font-bold mb-2">CSS</h3>
+                    <p class="text-gray-600">
+                        CSS (от английского Cascading Style Sheets — каскадные таблицы стилей) — это язык стилевого оформления для веб-страниц. 
+                        Он задаёт внешний вид веб-страницы: цвет текста, шрифты, размер и расстояние между элементами, положение элементов на странице, 
+                        а также эффекты анимации и многое другое. 
+                        С помощью CSS можно создать красивую, современную и удобную веб-страницу.
+                        Попробуйте создать свой собственный стиль для сайта!
+                        Научитесь использовать CSS, чтобы изменить цвет, шрифты, размеры и расположение элементов. 
+                    </p>
+                    <a href="service-css.html" class="op-button mt-4 bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded">
+                        Подробнее
+                    </a>
+                </div>
+
+                <!-- Сервис 3: JavaScript -->
+                <div class="op-card bg-white p-4 rounded-lg shadow-md">
+                    <img src="https://i.pinimg.com/736x/00/9b/d3/009bd3928995fabdef657473f60e4a92.jpg" alt="JavaScript" class="w-full rounded-md mb-4">
+                    <h3 class="text-lg font-bold mb-2">JavaScript</h3>
+                    <p class="text-gray-600">
+                        JavaScript — мультипарадигменный язык программирования. Поддерживает объектно-ориентированный, императивный и функциональный стили. Является реализацией спецификации ECMAScript (стандарт ECMA-262[2]). 
+                        JavaScript обычно используется как встраиваемый язык для программного доступа к объектам приложений. 
+                        Наиболее широкое применение находит в браузерах как язык сценариев для придания интерактивности веб-страницам[8]. 
+                        Основные архитектурные черты: динамическая типизация, слабая типизация, автоматическое управление памятью, прототипное программирование, функции как объекты первого класса.
+                        Добавьте интерактивность на свои страницы! Научитесь программировать на JavaScript, 
+                        чтобы создавать анимацию, реагировать на события, обрабатывать данные и многое другое.
+                    </p>
+                    <a href="service-javascript.html" class="op-button mt-4 bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded">
+                        Подробнее
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        
+    </main>
+
+    
+    
+</main>
+
+<footer class="op-container py-4 bg-gray-100 text-center">
+    <p>&copy; 2023 Игровое обучение веб-разработке</p>
+    <div id="page-numbers"></div> 
+</footer>
+
+<script>
+    const themeToggle = document.getElementById('theme-toggle');
+    const themeText = document.getElementById('theme-text');
+    const body = document.body;
+
+    themeToggle.addEventListener('click', () => {
+        const currentTheme = body.classList.contains('dark') ? 'dark' : 'light';
+
+        if (currentTheme === 'dark') {
+            body.classList.remove('dark'); 
+            themeText.textContent = 'Темная тема';
+        } else {
+            body.classList.add('dark'); 
+            themeText.textContent = 'Светлая тема';
+        }
+    });
+
+    // Нумерация по страницам
+    const pageNumbers = document.getElementById('page-numbers');
+    const totalPages = 5; 
+    const currentPage = 1; 
+
+    for (let i = 1; i <= totalPages; i++) {
+        const pageLink = document.createElement('a');
+        pageLink.href = '#';
+        pageLink.textContent = i;
+        pageLink.classList.add('page-link'); 
+        if (i === currentPage) {
+            pageLink.classList.add('active'); 
+        }
+        pageNumbers.appendChild(pageLink);
+    }
+</script>
+</body>
+</html>

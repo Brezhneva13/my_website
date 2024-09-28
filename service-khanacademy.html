@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Академия Хана - Обучение веб-разработке в игровой форме</title>
+    <link rel="stylesheet" href="https://unpkg.com/open-props">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.OpenAIapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.OpenAIapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet"> 
+</head>
+<body>
+    <header class="op-container py-4 bg-gray-100">
+        <nav class="op-menu flex justify-between items-center">
+            <h1 class="text-3xl font-bold text-gray-800">Обучение в игре</h1>
+            <li><a href="#" class="hover:underline">Блоги</a></li>
+            <li><a href="#" class="hover:underline">Онлайн-магазины</a></li>
+            <li><a href="#" class="hover:underline">Социальные сети</a></li>
+        
+    </ul>
+</nav>
+</header>
+<ul class="list-disc pl-8 text-gray-4">
+        
+<li><a href="index.html" class="hover:underline">Главная</a></li>
+<li><a href="services.html" class="hover:underline">Сервисы</a></li>
+<li><a href="advantages.html" class="hover:underline">Преимущества</a></li>
+<li><a href="reviews.html" class="hover:underline">Отзывы</a></li>
+<li><a href="contacts.html" class="hover:underline">Контакты</a></li>
+<li><a href="about.html" class="hover:underline">О нас</a></li>
+</ul>
+</aside>
+
+    <main class="op-container py-8">
+        <section class="op-main px-4">
+            <h2 class="text-2xl font-bold mb-4">Сервис: Академия Хана</h2>
+            <p class="text-gray-600 mb-4">
+                Академия Хана -  известный образовательный ресурс, который предлагает 
+                бесплатные онлайн-курсы по различным темам,  включая веб-разработку. 
+                Академия Хана предлагает  игру "Час кода", которая учит основам HTML 
+                и CSS посредством создания простых веб-страниц. 
+            </p>
+
+            <div class="mb-4">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/YOUR_VIDEO_ID_FOR_KHAN_ACADEMY" 
+                        title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+                </iframe>
+            </div>
+
+            <p class="text-gray-600 mb-4">
+                "Час кода" позволяет  игрокам  ознакомиться  с  основами  HTML  и  CSS  
+                через интерактивные задачи и  уроки. Вы научитесь создавать  элементы  
+                веб-страницы, изменять их внешний вид и  реализовать  базовые  
+                функции. 
+            </p>
+            
+            <p class="text-gray-600 mb-4">
+                В результате обучения вы сможете:
+                <ul class="list-disc pl-8 text-gray-600">
+                    <li>Создавать простые веб-страницы</li>
+                    <li>Использовать основные HTML-теги</li>
+                    <li>Изменять стиль веб-страниц с помощью CSS</li>
+                    <li>Понимать основы веб-разработки</li>
+                </ul>
+            </p>
+
+            <p class="text-gray-600 mb-4">
+                Академия Хана — отличный выбор для начинающих веб-разработчиков, 
+                которые хотят  получить  первые  знания  о  HTML  и  CSS  в  увлекательной 
+                и  доступной  форме.
+            </p>
+        </section>
+    </main>
+
+    <footer class="op-container py-4 bg-gray-100 text-center">
+        <p>&copy; 2023 Игровое обучение веб-разработке</p>
+        <div id="page-numbers"></div> 
+    </footer>
+    
+    <script>
+        const themeToggle = document.getElementById('theme-toggle');
+        const themeText = document.getElementById('theme-text');
+        const body = document.body;
+
+        themeToggle.addEventListener('click', () => {
+            const currentTheme = body.classList.contains('dark') ? 'dark' : 'light';
+
+            if (currentTheme === 'dark') {
+                body.classList.remove('dark'); 
+                themeText.textContent = 'Темная тема';
+            } else {
+                body.classList.add('dark'); 
+                themeText.textContent = 'Светлая тема';
+            }
+        });
+
+        // Нумерация по страницам
+        const pageNumbers = document.getElementById('page-numbers');
+        const totalPages = 5; 
+        const currentPage = 1;
+
+        for (let i = 1; i <= totalPages; i++) {
+            const pageLink = document.createElement('a');
+            pageLink.href = '#'; 
+            pageLink.textContent = i;
+            pageLink.classList.add('page-link'); 
+            if (i === currentPage) {
+                pageLink.classList.add('active'); 
+            }
+            pageNumbers.appendChild(pageLink);
+        }
+    </script>
+</body>
+</html>

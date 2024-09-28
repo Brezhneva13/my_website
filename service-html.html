@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Сервисы - Обучение веб-разработке в игровой форме</title>
+    <link rel="stylesheet" href="https://unpkg.com/open-props">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.OpenAIapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.OpenAIapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet"> 
+</head>
+<body>
+    <header class="op-container py-4 bg-gray-100">
+        <nav class="op-menu flex justify-between items-center">
+            <h1 class="text-3xl font-bold text-gray-800">Обучение в игре</h1>
+            <ul class="flex space-x-4 justify-end"> 
+                <li><a href="#" class="hover:underline">Блоги</a></li>
+                <li><a href="#" class="hover:underline">Онлайн-магазины</a></li>
+                <li><a href="#" class="hover:underline">Социальные сети</a></li>
+            
+        </ul>
+    </nav>
+</header>
+<ul class="list-disc pl-8 text-gray-4">
+            
+    <li><a href="index.html" class="hover:underline">Главная</a></li>
+    <li><a href="services.html" class="hover:underline">Сервисы</a></li>
+    <li><a href="advantages.html" class="hover:underline">Преимущества</a></li>
+    <li><a href="reviews.html" class="hover:underline">Отзывы</a></li>
+    <li><a href="contacts.html" class="hover:underline">Контакты</a></li>
+    <li><a href="about.html" class="hover:underline">О нас</a></li>
+</ul>
+</aside>
+
+    <main class="op-container py-8">
+        <section class="op-main px-4">
+            <h2 class="text-2xl font-bold mb-4">Наши сервисы</h2>
+            <p class="text-gray-600 mb-4">
+                Выберите сервис, который вам интересен:
+            </p>
+
+            <div id="services-list" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+                <!-- Сервис 1: CodeCombat -->
+                <div class="op-card bg-white p-4 rounded-lg shadow-md" data-service="service-codecombat">
+                    <img src="https://avatars.dzeninfra.ru/get-zen_doc/271828/pub_65b6293fdf1b863865fef8ce_65b6528898779f1cac3312b4/scale_1200" alt="CodeCombat" class="w-full rounded-md mb-4">
+                    <h3 class="text-lg font-bold mb-2">CodeCombat</h3>
+                    <p class="text-gray-600">
+                        CodeCombat — это игра, которая учит программированию на языках Python и JavaScript.
+                        В CodeCombat вы играете роль героя... 
+                    </p>
+                    <a href="service-codecombat.html" class="op-button mt-4 bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded" 
+                       data-target="service-codecombat">
+                        Подробнее
+                    </a>
+                </div>
+
+                <!-- Сервис 2: Академия Хана -->
+                <div class="op-card bg-white p-4 rounded-lg shadow-md" data-service="service-khanacademy">
+                    <img src="https://i.pinimg.com/originals/de/26/a4/de26a420825cc58aa9fab281555bb9c6.png" alt="Академия Хана" class="w-full rounded-md mb-4">
+                    <h3 class="text-lg font-bold mb-2">Академия Хана</h3>
+                    <p class="text-gray-600">
+                        Академия Хана -  известный образовательный ресурс, который предлагает 
+                        бесплатные онлайн-курсы по различным темам...
+                    </p>
+                    <a href="service-khanacademy.html" class="op-button mt-4 bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded" 
+                       data-target="service-khanacademy">
+                        Подробнее
+                    </a>
+                </div>
+
+                <!-- Сервис 3: Code.org -->
+                <div class="op-card bg-white p-4 rounded-lg shadow-md" data-service="service-codeorg">
+                    <img src="https://create.ucsd.edu/_images/code_learningpartner_horiz_rgb.png" alt="Code.org" class="w-full rounded-md mb-4">
+                    <h3 class="text-lg font-bold mb-2">Code.org</h3>
+                    <p class="text-gray-600">
+                        Code.org  -  это  некоммерческая  организация,  которая  ставит  перед  собой 
+                        цель  сделать  компьютерное  программирование  доступным  для  всех. 
+                    </p>
+                    <a href="service-codeorg.html" class="op-button mt-4 bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded" 
+                       data-target="service-codeorg">
+                        Подробнее
+                    </a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="op-container py-4 bg-gray-100 text-center">
+        <p>&copy; 2023 Игровое обучение веб-разработке</p>
+        <div id="page-numbers"></div> 
+    </footer>
+    
+    <script>
+        const themeToggle = document.getElementById('theme-toggle');
+        const themeText = document.getElementById('theme-text');
+        const body = document.body;
+
+        themeToggle.addEventListener('click', () => {
+            const currentTheme = body.classList.contains('dark') ? 'dark' : 'light';
+
+            if (currentTheme === 'dark') {
+                body.classList.remove('dark'); 
+                themeText.textContent = 'Темная тема';
+            } else {
+                body.classList.add('dark'); 
+                themeText.textContent = 'Светлая тема';
+            }
+        });
+
+        // Нумерация по страницам
+        const pageNumbers = document.getElementById('page-numbers');
+        const totalPages = 5; 
+        const currentPage = 1; 
+
+        for (let i = 1; i <= totalPages; i++) {
+            const pageLink = document.createElement('a');
+            pageLink.href = '#'; 
+            pageLink.textContent = i;
+            pageLink.classList.add('page-link'); 
+            if (i === currentPage) {
+                pageLink.classList.add('active'); 
+            }
+            pageNumbers.appendChild(pageLink);
+        }
+    </script>
+</body>
+</html>
+
+    <script>
+        const servicesList = document.getElementById('services-list');
+        const serviceDetails = document.getElementById('service-details');
+        const serviceTitle = document.getElementById('service-title');
+        const serviceDescription = document.getElementById('service-description');
+        const serviceVideo = document.getElementById('service-video');
+
+        servicesList.addEventListener('click', (event) => {
+            const target = event.target;
+            if (target.tagName === 'A') {
+                const serviceId = target.dataset.target;
+                const serviceElement = document.querySelector(`[data-service="${serviceId}"]`);
+
+                if (serviceElement) {
+                    serviceTitle.textContent = serviceElement.querySelector('h3').textContent;
+                    serviceDescription.textContent = serviceElement.querySelector('p').textContent;
+
+                    // Вставка видео для каждого сервиса
+                    switch (serviceId) {
+                        case "service-codecombat":
+                            serviceVideo.src = "";
+                            break;
+                        case "service-khanacademy":
+                            serviceVideo.src = "";
+                            break;
+                        case "service-codeorg":
+                            serviceVideo.src = "";
+                            break;
+                    }
+
+                    serviceDetails.classList.remove('hidden'); 
+                }
+            }
+        });
+    </script>
+</body>

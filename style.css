@@ -1,0 +1,318 @@
+/* Общие стили */
+body {
+    font-family: 'Open Sans', sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #f4f4f4; /* Светло-серый фон */
+    color: #333; /* Темно-серый цвет текста */
+}
+
+/* Шапка */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fff; /* Белый фон */
+    padding: 20px; 
+    width: 100%; 
+}
+
+h1 {
+    font-size: 2.5rem; /* Более крупный заголовок */
+    font-weight: bold;
+    color: #333; 
+}
+
+/* Меню */
+.op-menu > ul {
+    display: flex;
+    gap: 1.5rem; /*  Больше  пространства  между  элементами  меню  */
+}
+
+.op-menu > ul > li > a {
+    font-size: 1rem; 
+    color: #333; 
+    text-decoration: none; 
+}
+
+.op-menu > ul > li > a:hover {
+    color: #007bff; /* Синий цвет при наведении */
+    text-decoration: underline; 
+}
+
+/* Кнопка переключения темы */
+.op-button {
+    background-color: #333; /* Темно-серый цвет фона */
+    color: #fff; /* Белый цвет текста */
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px; 
+    cursor: pointer;
+}
+
+.op-button:hover {
+    background-color: #555; /*  Более  темный  оттенок  при  наведении  */
+}
+
+/* Основной контент */
+main {
+    display: flex;
+    justify-content: space-between; /*  Размещение  меню  слева  от  основного  контента  */
+    padding: 20px;
+    width: 100%; 
+}
+
+/*  Секция  с  основным  контентом  */
+section {
+    width: 70%; /*  Занимает  70%  ширины  экрана  */
+    background-color: #fff; /*  Белый  фон  */
+    padding: 20px; 
+    border-radius: 10px; /*  Скругленные  углы  */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /*  Небольшая  тень  */
+    margin-right: 20px; /*  Добавляем  отступ  справа  от  меню  */
+}
+
+h2 {
+    font-size: 2rem; /*  Более  крупный  заголовок  */
+    font-weight: bold;
+    color: #333; 
+    margin-bottom: 1rem; /*  Отступ  снизу  */
+}
+
+p {
+    line-height: 1.6; /*  Увеличенный  межстрочный  интервал  */
+    color: #555; /*  Более  светлый  серый  цвет  */
+}
+
+/*  Кнопка  "Перейти  к  сервисам"  */
+.op-button {
+    background-color: #007bff; /*  Синий  цвет  */
+    color: #fff; 
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px; 
+    cursor: pointer;
+}
+
+.op-button:hover {
+    background-color: #0056b3; /*  Темнее  синий  при  наведении  */
+}
+
+/*  Левое  меню  */
+aside {
+    width: 200px;  /*  Ширина  меню  можете  изменить  по  вашему  вкусу  */
+    background-color: #f0f0f0; 
+    padding: 20px;
+    border-radius: 10px; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /*  Небольшая  тень  */
+    margin-left: 0; /*  Убираем  отступ  слева  */
+    margin-right: 80px; /*  Добавляем  отступ  справа  от  меню  */
+}
+
+aside ul {
+    list-style: none; /*  Убираем  маркеры  */
+    padding: 0; 
+}
+
+aside li a {
+    text-decoration: none; 
+    color: #333; 
+    font-size: 1rem; 
+    padding: 10px 0; /*  Отступ  сверху  и  снизу  */
+    display: block; /*  Занимает  всю  ширину  */
+    text-align: right; /*  Выравниваем  текст  ссылки  вправо  */
+}
+
+aside li a:hover {
+    background-color: #e0e0e0; /*  Серый  фон  при  наведении  */
+    color: #007bff; /*  Синий  цвет  текста  при  наведении  */
+}
+
+/*  Изображение  в  шапке  */
+.flex-shrink-0 img {
+    width: 100%; /*  Занимает  всю  ширину  */
+    height: auto; /*  Высота  автоматически  подбирается  */
+    border-radius: 10px; /*  Скругленные  углы  */
+}
+
+/*  Нумерация  страниц  */
+.page-link {
+    margin: 0 5px; 
+    color: #333; 
+    text-decoration: none;
+}
+
+.page-link.active {
+    font-weight: bold; 
+    color: #007bff;
+}
+
+/*  Стили  для  темной  темы  */
+.dark {
+    background-color: #333; /*  Темно-серый  фон  */
+    color: #fff; /*  Белый  цвет  текста  */
+}
+
+.dark .op-card {
+    background-color: #444; /*  Темный  серый  фон  для  карточек  */
+}
+
+.dark .op-menu > ul > li > a {
+    color: #fff; 
+}
+
+.dark .op-menu > ul > li > a:hover {
+    color: #007bff; 
+}
+
+.dark .op-button {
+    background-color: #007bff; /*  Синий  цвет  */
+    color: #fff; 
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px; 
+    cursor: pointer;
+}
+
+.dark .op-button:hover {
+    background-color: #0056b3; /*  Темнее  синий  при  наведении  */
+}
+
+.dark aside {
+    background-color: #555; /*  Более  темный  серый  фон  */
+}
+
+.dark aside li a {
+    color: #fff; 
+}
+
+.dark aside li a:hover {
+    background-color: #777; /*  Более  светлый  серый  фон  при  наведении  */
+    color: #007bff; 
+}
+
+/*  Стили  для  карточек  (op-card)  */
+.op-card {
+    background-color: #fff; /*  Белый  фон  */
+    border-radius: 10px; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /*  Небольшая  тень  */
+    padding: 20px; 
+    margin-bottom: 20px; 
+}
+
+.op-card img {
+    width: 100%; 
+    height: auto; 
+    border-radius: 10px; 
+    margin-bottom: 10px; 
+}
+
+.op-card h3 {
+    font-size: 1.5rem; 
+    font-weight: bold; 
+    color: #333; 
+    margin-bottom: 10px; 
+}
+
+.op-card p {
+    line-height: 1.6; 
+    color: #555; 
+}
+
+/*  Стили  для  кнопок  (op-button)  */
+.op-button {
+    background-color: #007bff; /*  Синий  цвет  */
+    color: #fff; 
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px; 
+    cursor: pointer;
+}
+
+.op-button:hover {
+    background-color: #0056b3; /*  Темнее  синий  при  наведении  */
+}
+
+/*  Стили  для  меню  (op-menu)  */
+.op-menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%; 
+    padding: 10px 0; 
+}
+
+/*  Дополнительные  стили  */
+
+/*  Стили  для  нумерации  страниц  */
+.page-link {
+    display: inline-block; /*  Делаем  ссылку  блочным  элементом  */
+    margin: 0 5px; 
+    color: #333; 
+    text-decoration: none;
+}
+
+.page-link.active {
+    font-weight: bold; 
+    color: #007bff;
+}
+
+/*  Стили  для  изображения  в  шапке  */
+.flex-shrink-0 img {
+    width: 100%; /*  Занимает  всю  ширину  */
+    height: auto; /*  Высота  автоматически  подбирается  */
+    border-radius: 10px; /*  Скругленные  углы  */
+}
+
+/*  Дополнительные  стили  для  темной  темы  */
+.dark .op-card {
+    background-color: #333; /*  Темный  фон  */
+    color: #fff; /*  Белый  текст  */
+}
+
+.dark .op-menu > ul > li > a {
+    color: #fff; 
+}
+
+.dark .op-menu > ul > li > a:hover {
+    color: #007bff; 
+}
+
+.dark .op-button {
+    background-color: #007bff; /*  Синий  цвет  */
+    color: #fff; 
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px; 
+    cursor: pointer;
+}
+
+.dark .op-button:hover {
+    background-color: #0056b3; /*  Темнее  синий  при  наведении  */
+}
+
+/*  Подвал  по  центру  */
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+    width: 100%;
+    background-color: #fff; 
+}
+
+footer p {
+    margin: 0; 
+    color: #333; 
+}
+
+/* Переходы */
+.op-button:hover {
+    background-color: #007bff; /*  Синий  цвет  при  наведении  */
+}
+
+.op-menu > ul > li > a:hover {
+    background-color: #e0e0e0; /*  Серый  фон  при  наведении  */
+    color: #333; /*  Темно-серый  цвет  текста  при  наведении  */
+}

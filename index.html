@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Обучение веб-разработке в игровой форме</title>
+    <link rel="stylesheet" href="https://unpkg.com/open-props">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.OpenAIapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.OpenAIapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet"> 
+</head>
+<body>
+    <header class="op-container py-4 bg-gray-100">
+        <nav class="op-menu flex justify-between items-center">
+            <h1 class="text-3xl font-bold text-gray-800">Обучение в игре</h1>
+            <ul class="flex space-x-4 justify-end"> 
+                <li><a href="#" class="hover:underline">Блоги</a></li>
+                <li><a href="#" class="hover:underline">Онлайн-магазины</a></li>
+                <li><a href="#" class="hover:underline">Социальные сети</a></li>
+            </ul>
+            <button id="theme-toggle" class="op-button bg-gray-800 hover:bg-gray-900 text-white font-bold py-2 px-4 rounded">
+                <span id="theme-text">Темная тема</span>
+            </button>
+        </nav>
+    </header>
+
+    <main class="op-container py-8 flex justify-between"> 
+        <section class="op-main px-4 flex-grow"> 
+            <h2 class="text-2xl font-bold mb-10">Добро пожаловать!</h2> 
+            <p class="text-gray-600 mb-12"> 
+                Здесь вы найдете игры для обучения веб-разработке.
+                Выберите сервис, который вам интересен, и начните обучение!
+            </p>
+            <a href="services.html" class="op-button bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded">
+                Перейти к сервисам
+            </a>
+        </section>
+
+        <aside class="flex-shrink-0 mr-4">  <!-- Левое меню -->
+            <ul class="list-disc pl-8 text-gray-600">
+                <li><a href="index.html" class="hover:underline">Главная</a></li>
+                <li><a href="services.html" class="hover:underline">Сервисы</a></li>
+                <li><a href="advantages.html" class="hover:underline">Преимущества</a></li>
+                <li><a href="reviews.html" class="hover:underline">Отзывы</a></li>
+                <li><a href="contacts.html" class="hover:underline">Контакты</a></li>
+                <li><a href="about.html" class="hover:underline">О нас</a></li>
+            </ul>
+        </aside>
+
+        <div class="flex-shrink-0 ml-4">
+            <img src="https://avatars.mds.yandex.net/i?id=80de65d59cd69f1dd60bd273b171d0fed5e3d8b5-10878141-images-thumbs&n=13" alt="Преимущества обучения в игре" class="w-96">
+        </div>
+    </main>
+
+    <footer class="op-container py-4 bg-gray-100 text-center">
+        <p>&copy; 2023 Игровое обучение веб-разработке</p>
+        <div id="page-numbers"></div> 
+    </footer>
+    
+    <script>
+        const themeToggle = document.getElementById('theme-toggle');
+        const themeText = document.getElementById('theme-text');
+        const body = document.body;
+
+        themeToggle.addEventListener('click', () => {
+            const currentTheme = body.classList.contains('dark') ? 'dark' : 'light';
+
+            if (currentTheme === 'dark') {
+                body.classList.remove('dark'); 
+                themeText.textContent = 'Темная тема';
+            } else {
+                body.classList.add('dark'); 
+                themeText.textContent = 'Светлая тема';
+            }
+        });
+
+        // Нумерация по страницам
+        const pageNumbers = document.getElementById('page-numbers');
+        const totalPages = 5;
+        const currentPage = 1; 
+
+        for (let i = 1; i <= totalPages; i++) {
+            const pageLink = document.createElement('a');
+            pageLink.href = '#'; 
+            pageLink.textContent = i;
+            pageLink.classList.add('page-link'); 
+            if (i === currentPage) {
+                pageLink.classList.add('active');
+            }
+            pageNumbers.appendChild(pageLink);
+        }
+    </script>
+</body>
+</html>
